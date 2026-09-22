@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Automation Learning Demo</title>
+</head>
+<body>
+    <h1>浏览器自动化学习演示</h1>
+    <label for="courseCode">课号</label>
+    <input type="text" id="courseCode" placeholder="例如 AGR300">
+    <label for="section">分班</label>
+    <input type="text" id="section" placeholder="例如00">
+
+    <label for="startTime">开始时间</label>
+    <!-- 创建日期和时间输入框，用户可以选择哪一天、几点开始-->
+    <input type="datetime-local" id="startTime">
+    <br>
+
+    <label for="delaySeconds">延迟执行（秒）</label>
+    <!-- 创建数字输入框；最小值是 0，只允许每次增减 1 秒，默认不额外等待 -->
+    <input type="number" id="delaySeconds" min="0" step="1" value="0">
+    <br>
+
+    <!-- 让用户设置：在网页中从哪些元素范围内寻找申请按钮 -->
+    <label for="targetSelector">目标选择器（高级）</label>
+    <!-- 默认从全部 button 元素中寻找；一般不需要修改 -->
+    <input type="text" id="targetSelector" value="button" placeholder="例如 button">
+    <br>
+
+    <button id="startButton" type="button">保存并预约申请</button>
+
+    <!-- 用来向用户显示：已保存等状态 -->
+    <p id="statusText"></p>
+    <script src="popup.js"></script>
+</body>
+</html>
